@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _islower - Check Holberton
+ * _islower - chek to print "011"
  * @c: An input character
  * Description: function uses _putchar function to print
  * alphabet in lowercase 10 times
