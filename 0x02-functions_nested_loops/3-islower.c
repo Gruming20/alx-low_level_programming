@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _islower - prints "islower"
+ * _islower - prints "011"
  *
  * Return: nothing
  */
