@@ -15,15 +15,15 @@ int i = 0;
 int random = 0;
 srand((unsigned int)(time(NULL)));
 
+char password[N];
 char *num;
 char *letter;
 char *symbols;
-
+char *LETTER;
 num = "0123456789";
 letter = "abcdefghijklmnoqprstuvwyzx";
-char LETTER[] = "ABCDEFGHIJKLMNOQPRSTUYWVZX";
+LETTER = "ABCDEFGHIJKLMNOQPRSTUYWVZX";
 symbols = "!@#$^&*?";
-char password[10];
 
 random = rand() % 4;
 for (i = 0; i < N; i++)
