@@ -1,66 +1,42 @@
-#include <math.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
- /**
- * randomKeygen - a function that generates a random passowrds.
- * main - check the code for the randomKeygen and print passwords.
- * @N: An integer input pointer.
+
+/**
+ * main - generates random valid passwords for the program 101-crackme.
  *
- * Return: Always 0.
+ * Return: always 0
  */
-void randomKeygen()
-{
-int N=11;
-int i = 0;
-int random = 0;
-srand((unsigned int)(time(NULL)));
-
-char password[N];
-char *num;
-char *letter;
-char *symbols;
-char *LETTER;
-num = "0123456789";
-letter = "abcdefghijklmnoqprstuvwyzx";
-LETTER = "ABCDEFGHIJKLMNOQPRSTUYWVZX";
-symbols = "!@#$^&*?";
-
-random = rand() % 4;
-for (i = 0; i < N; i++)
-{
-if (random == 1)
-{
-password[N] = num[rand() % 10];
-random = rand() % 4;
-printf("%c", password[N]);
-}
-else if (random == 2)
-{
-password[N] = symbols[rand() % 8];
-random = rand() % 4;
-printf("%c", password[N]);
-}
-else if (random == 3)
-{
-password[N] = LETTER[rand() % 26];
-random = rand() % 4;
-printf("%c", password[N]);
-}
-else
-{
-password[N] = letter[rand() % 26];
-random = rand() % 4;
-printf("%c", password[N]);
-}
-}
-}
-
 int main(void)
 {
-int N=10;
-randomKeygen(N);
+int i, n, letter, symbol;
+char c[] = "!@#$^&0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+char p[66];
 
-return 0;
+srand(time(NULL));
+while (symbol != 2772)
+{
+i = letter = symbol = 0;
+while ((2772 - 122) > symbol)
+{
+n = rand() % 62;
+p[i] = c[n];
+symbol += c[n];
+i++;
 }
-
+while (c[letter])
+{
+if (c[letter] == (2772 - symbol))
+{
+p[i] = c[letter];
+symbol += c[letter];
+i++;
+break;
+}
+letter++;
+}
+}
+p[i] = '\0';
+printf("%s", p);
+return (0);
+}
