@@ -17,9 +17,10 @@ srand((unsigned int)(time(NULL)));
 
 char *num;
 char *letter;
+char *LETTER;
 num = "0123456789";
 letter = "abcdefghijklmnoqprstuvwyzx";
-char LETTER[] = "ABCDEFGHIJKLMNOQPRSTUYWVZX";
+LETTER = "ABCDEFGHIJKLMNOQPRSTUYWVZX";
 char symbols[] = "!@#$^&*?";
 char password[10];
 
