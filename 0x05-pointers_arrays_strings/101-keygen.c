@@ -15,7 +15,7 @@ int i = 0;
 int random = 0;
 srand((unsigned int)(time(NULL)));
 
-char password[N];
+char password[11];
 char *num;
 char *letter;
 char *symbols;
@@ -57,7 +57,7 @@ printf("%c", password[N]);
 
 int main(void)
 {
-int N = 10;
+int N=10;
 randomKeygen(N);
 
 return 0;
