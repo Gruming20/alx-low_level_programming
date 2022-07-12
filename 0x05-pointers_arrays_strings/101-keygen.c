@@ -9,13 +9,14 @@
  *
  * Return: Always 0.
  */
-void randomKeygen(int N)
+void randomKeygen()
 {
+int N=11;
 int i = 0;
 int random = 0;
 srand((unsigned int)(time(NULL)));
 
-char password[11];
+char password[N];
 char *num;
 char *letter;
 char *symbols;
